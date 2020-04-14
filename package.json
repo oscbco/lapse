@@ -1,6 +1,6 @@
 {
   "name": "@oscbco/lapse",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Underscore lapse",
   "main": "./public/index.js",
   "files": [
@@ -33,7 +33,7 @@
     "babel-preset-env": "^1.7.0",
     "core-js": "^3.6.5",
     "html-webpack-plugin": "^4.2.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^3.7.0",
     "webpack-cli": "^3.3.11",
