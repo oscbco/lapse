@@ -1,7 +1,7 @@
 {
   "name": "@oscbco/lapse",
-  "version": "0.0.4",
-  "description": "Underscore lapse",
+  "version": "0.0.5",
+  "description": "Get how long ago an inputted date was",
   "main": "./public/index.js",
   "files": [
     "index.js",
@@ -17,22 +17,26 @@
   "bugs": {
     "url": "https://github.com/oscbco/lapse.git/issues"
   },
-  "homepage": "",
+  "homepage": "https://oscbco.github.io/",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "test": "jest",
+    "preversion": "npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags"
   },
-  "dependencies": {
-    "@babel/preset-env": "^7.9.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-es2015-parameters": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "core-js": "^3.6.5",
     "html-webpack-plugin": "^4.2.0",
+    "jest": "^25.3.0",
     "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^3.7.0",
