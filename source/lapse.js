@@ -83,8 +83,11 @@ const languages = {
   }
 }
 
-export default function getLapse (lang, milliseconds) {
-  milliseconds = Date.now() - milliseconds;
+export default function getLapse (lang, milliseconds, pinned = Date.now()) {
+  if (pinned <= milliseconds) {
+    return false;
+  }
+  milliseconds = pinned - milliseconds;
   if (milliseconds < 60000) {
     return languages[lang].seconds();
   } else if (milliseconds < 3600000) {
